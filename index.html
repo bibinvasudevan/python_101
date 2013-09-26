@@ -1,53 +1,754 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="stylesheets/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="stylesheets/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="javascripts/slides" src="javascripts/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<slides class="layout-widescreen">
 
-    <title>Python 101 by none-da</title>
-  </head>
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/python_main_logo.png"></span>
+    </article>
+  </slide>
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1>Python 101</h1>
-        <h2>HTML5 slides for Introduction to Python</h2>
-        <a href="https://github.com/none-da/python_101" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/python-icon.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <p>Open <code>template.html</code> in a HTML5 supported browser and use arrow keys to move from one slide to other.</p>
-        </section>
+  <slide>
+    <hgroup>
+      <h2>Why Python ?</h2>
+      <h3>When we already know languages like C, C++, Java etc...</h3>
+    </hgroup>
+    <article>
+    <p>Very important advantages (among many) :</p>
+      <ul class="build">
+        <li>Its faster to write a solution in Python!</li>
+        <li>Code is extremly readable</li>
+        <li>Its very easy to learn</li>
+        <li>Many utilities come with the language directly.</li>
+      </ul>
+    </article>
+  </slide>
 
-        <aside id="sidebar">
-          <a href="https://github.com/none-da/python_101/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/none-da/python_101/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <h2>Don't Believe me ?</h2>
+      <h3>Lets write a small program</h3>
+    </article>
+  </slide>
 
-          <p class="repo-owner"><a href="https://github.com/none-da/python_101"></a> is maintained by <a href="https://github.com/none-da">none-da</a>.</p>
+  <slide>
+    <hgroup>
+      <h2>Hello World program</h2>
+    </hgroup>
+    <article>
+    <ul class="build">
+      <li>
+        <pre class="prettyprint" data-lang="c++">
+      <b>#include &lt;iostream.h&gt;</b>
+      int main()
+      {
+        <b>cout</b> &lt;&lt; "Hello World";
+        <b>return</b> 0;
+      }</pre>
+      </li>
+      <li>
+        <pre class="prettyprint" data-lang="java">
+      <b>public</b> class HelloWorld {
+          public <b>static void</b> main(<b>String[] args</b>) {
+              <b>System.out.println</b>("Hello, World");
+          }
+      }</pre>
+      </li>
+      <li>
+        <pre class="prettyprint" data-lang="python">
+      <b>print</b> 'Hello World.'  # Are you serious ? Just one line ?</pre>
+      </li>
+    </ul>
 
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
 
-  
-  </body>
+
+    </article>
+  </slide>
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/Not-Bad_o_93049.jpg"></span>
+
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Lets run the program</h2>
+    </hgroup>
+    <article>
+      <ul class='build'>
+        <li>Using Python Interpreter
+          <ul>
+            <li>
+            <pre class="prettyprint" data-lang="python">$ python
+Python 2.7.2 (default, Oct 11 2012, 20:14:37)
+[GCC 4.2.1 Compatible Apple Clang 4.0 (tags/Apple/clang-418.0.60)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+<b>&gt;&gt;&gt; print 'Hello World.'
+Hello World.</b>
+&gt;&gt;&gt;</pre></li>
+          </ul>
+        </li>
+        <li>
+          Using Python script
+          <ul>
+            <li>
+              <pre class="prettyprint" data-lang="shell">$ cat hello.py
+print 'Hello World.'
+$ <b>python hello.py</b>
+Hello World.
+              </pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <h3>Now that you are partially convinced.....</h3>
+      <h2>Lets dig deep into <b>Python</b></h2>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Numbers, and related operators</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; 3 + 2
+5
+&gt;&gt;&gt; 5 * 3
+15
+&gt;&gt;&gt; 5 - 2
+3
+&gt;&gt;&gt; 5 ** 4
+625
+&gt;&gt;&gt; 5 / 9
+0
+&gt;&gt;&gt; 5 / 9.0
+0.5555555555555556
+&gt;&gt;&gt; 5 % 2
+1
+&gt;&gt;&gt; type(4)
+&lt;type 'int'&gt;
+&gt;&gt;&gt; type(5/9.0)
+&lt;type 'float'&gt;</pre>
+    </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Assignments</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Dynamic Typing
+        <ul>
+          <li>No explicit <code>Type</code> declarations are required.</li>
+          <li>Type checking is done at <code>Run-Time</code></li>
+        </ul>
+        </li>
+      </ul>
+      <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; students_count = 50
+&gt;&gt;&gt; total_groups = 10
+&gt;&gt;&gt; num_of_students_in_each_group = students_count / total_groups
+&gt;&gt;&gt; num_of_students_in_each_group
+5
+      </pre>
+      Useful Tip :<br/><br/>For God sakes, lets not have <code>x = 5</code> or <code>i = 10</code>.<br/><br/>Define variable names with <code>meaning</code> I say!
+
+    </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Strings</h2>
+    </hgroup>
+    <article>
+      <ul class="build"><li>String assignment<br/>
+      <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; greeting = 'hello!'
+&gt;&gt;&gt; print greeting
+hello!
+      </pre>
+      </li>
+      <li>
+      <code>Multi</code>-line strings
+      <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; text = '''the quick brown fox jumped on me (yes thats me, not the
+... lazy cat) and ate my lunch. I dont know why! The Gods must be crazy I say!'''
+&gt;&gt;&gt;
+      </pre>
+      </li>
+      <li>
+        Concatentation
+        <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; 'Ramesh! ' + 'Suresh! ' + 'Can you give me your Five-Star'
+'Ramesh! Suresh! Can you give me your Five-Star ?'
+      </pre>
+      </li>
+    </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Printing Strings</h2>
+    </hgroup>
+    <article>
+    <ul class="build">
+      <li>
+        <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; name = 'Ramesh'
+&gt;&gt;&gt; print 'Good Morning %s' % name
+Good Morning Ramesh
+      </pre>
+      </li>
+      <li>
+        <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; print 'Good Morning {0}'.format(name)
+Good Morning Ramesh
+      </pre>
+      </li>
+    </ul>
+    </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Conditional statements</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; 10 &gt; 20
+False
+&gt;&gt;&gt; 20 &gt; 4
+True
+&gt;&gt;&gt; 10 / 20 &gt; 2  # Don't confuse yourself and others. Use brackets I say!
+False
+&gt;&gt;&gt; x = 10
+&gt;&gt;&gt; 3 &lt; x &lt; 15
+True
+      </pre>
+        </li>
+      </ul>
+
+    </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+      <h2>If Conditions</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; friend = 'Ramesh'
+&gt;&gt;&gt; if friend == 'Ramesh':
+...     print 'Play Games Together'
+... elif friend == 'Dad':
+...     print 'Give Coffee'
+... else:
+...     print 'Not invited'
+Play Games Together
+      </pre>
+        </li>
+      </ul>
+
+    </article>
+    </slide>
+
+<slide>
+    <hgroup>
+      <h2>Lists</h2>
+      <h3>A Data Structure to contain multiple items. Similar to an Array.</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; shopping_items = ['Milk', 'Dosa Mix', 'Chicken', 'Soap']
+&gt;&gt;&gt; greetings = [5, 4, 3, 2, 1, 'Happy New Year!']
+&gt;&gt;&gt; type(greetings)
+&lt;type 'list'&gt;
+</pre></li>
+<li>
+<pre class="prettyprint" data-lang="python">&gt;&gt;&gt; greetings.append(2014)  # Lists are mutable
+&gt;&gt;&gt; help(list)  # Gives a detailed description of all operations on a list</pre></li>
+<li>
+<pre class="prettyprint" data-lang="python">&gt;&gt;&gt; greetings[5]
+'Happy New Year!'
+&gt;&gt;&gt; greetings[-1]
+2014
+&gt;&gt;&gt; greetings[2:]
+[3, 2, 1, 'Happy New Year!', 2014]
+</pre>
+        </li>
+      </ul>
+    </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Tuples</h2>
+      <h3>A <code>Non-mutable</code> Data Structure to contain multiple items.</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; greetings = <b>(</b>5, 4, 3, 2, 1, 'Happy New Year!', 2014<b>)</b>
+</pre></li>
+<li>
+<pre class="prettyprint" data-lang="python">&gt;&gt;&gt; type(greetings)
+&lt;type 'tuple'&gt;
+&gt;&gt;&gt; help(greetings)  # or help(tuple) to know more about "tuple"
+</pre></li>
+      </ul>
+    </article>
+    </slide>
+
+ <slide>
+    <hgroup>
+      <h2>Functions</h2>
+      <h3>A piece of logic to be associated with a name</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; def greet_me():
+...     print 'Hello Students'
+...
+&gt;&gt;&gt; greet_me()
+Hello Students
+          </pre>
+        </li>
+        <li>
+          <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; def square_me(number):
+...     return number * number
+...
+&gt;&gt;&gt; square_me(10)
+100
+          </pre>
+        </li>
+      </ul>
+    </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Built-in Handy functions</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>len(sequence)</li>
+        <li>min(sequence)</li>
+        <li>max(sequence)</li>
+        <li>range(number)</li>
+        <li>map(handle, sequence)</li>
+        <li>reduce(handle, sequence)</li>
+        <li>type(object)</li>
+        <li>help(object)</li>
+        <li>dir(object)</li>
+        <li><a href="http://docs.python.org/2/library/functions.html">Many more</a> and <a href="http://docs.python.org/3/library/functions.html">many many more!</a></li>
+      </ul>
+    </article>
+    </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Methods</h2>
+      <h3>Similar to functions but actually work <code>on objects</code></h3>
+    </hgroup>
+    <article>
+    <ul>
+      <li>The object (i.e., instance of the class) is passed <code>implicitly</code> to the method
+      <li>The method has access to all the data contained within the class</li>
+      <ul class="build">
+        <li>
+          <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; class Student(object):
+...     def __init__(self, name):
+...         self.name = name
+...     def print_name(self):
+...         print self.name
+...
+&gt;&gt;&gt;
+</pre>
+        </li>
+        <li>
+          <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; stud = Student(name='Ramesh')
+&gt;&gt;&gt; stud.print_name()
+Ramesh</pre>
+        </li>
+      </ul>
+      </li>
+
+    </ul>
+    </article>
+    </slide>
+  <slide>
+    <hgroup>
+      <h2>For loop</h2>
+      <h3>Just to loop through a sequence of items to <code>do something</code> with them</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>There is no <code>i=0</code>, <code>i++</code> business thankfully :D</li>
+        <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; shopping_items = ['Milk', 'Dosa Mix', 'Chicken', 'Soap']
+&gt;&gt;&gt; <b>for item in shopping_items:
+...     print 'I am buying %s' % item</b>
+...
+I am buying Milk
+I am buying Dosa Mix
+I am buying Chicken
+I am buying Soap</pre>
+
+      </ul>
+    </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2>List comprehensions</h2>
+      <h3>An ultra simple/concise way to create lists</h3>
+    </hgroup>
+    <article>
+    <ul class="build">
+      <li>
+        <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; shopping_items = [('Milk', 2), ('Dosa Mix', 1), ('Soap', 3)]</pre>
+      </li>
+      <li>
+        <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; [item[1] for item in shopping_items]  # Is that a single line <code>for loop</code>?
+[2, 1, 3]</pre>
+      </li>
+    </ul>
+
+    </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2>String Operations</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>String can act as a <code>Sequence</code>
+          <ul class="build">
+            <li>Access characters using indexes</li>
+            <li>You can iterate over the characters using a for loop</li>
+            <li>string.split()
+              <ul>
+                <li>
+                  <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; 'Husband Wife'.split()
+['Husband', 'Wife']</pre>
+                </li>
+              </ul>
+
+            </li>
+            <li>separator.join(sequence)
+              <ul>
+                <li>
+                  <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; ' '.join(['Husband', 'Wife'])  # Together forever :D
+'Husband Wife'</pre>
+                </li>
+              </ul>
+            </li>
+            <li>string[::-1]
+              <ul>
+                <li>
+                  <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; 'Husband Wife'[::-1]  # Is that a string reverse ?
+'efiW dnabsuH'</pre>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Working with Files</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Reading File Content
+          <ul class="build">
+            <li>
+            <pre class="prettyprint" data-lang="shell">$ cat hello_world.py
+print 'Hello World'
+print 'How many times I have to wish the world "Hello" ? '
+print 'Atleast a million times'</pre>
+            </li>
+            <li>
+              <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; hello_file = open('hello_world.py')
+&gt;&gt;&gt; for line in hello_file:
+...     print line
+...
+print 'Hello World'
+
+print 'How many times I have to wish the world "Hello" ? '
+
+print 'Atleast a million times brother!'
+
+&gt;&gt;&gt;
+</pre>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+    </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Writing Content to Files</h2>
+    </hgroup>
+    <article>
+
+    <ul class="build">
+      <li>
+        <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; hello_file = open('hello_world.py', 'w')
+&gt;&gt;&gt; extra_lines = ['Why ? ', 'I am Gajini. ']
+&gt;&gt;&gt; for line in extra_lines:
+...     hello_file.write(line)
+...
+&gt;&gt;&gt; hello_file.close()  # This is good!</pre>
+      </li>
+      <li>
+        <pre class="prettyprint" data-lang="shell">$ cat hello_world.py
+Why ? I am Gajini. </pre>
+      </li>
+    </ul>
+    </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Closing Files in a better way</h2>
+    </hgroup>
+    <article>
+    <ul class="build">
+      <li>Understanding <code>with</code> aka <code>Context Manager</code></li>
+      <li>
+        <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; with open('hello_world.py', 'a') as hello_file:
+...      hello_file.write('Oye Gajini, Your camera is stolen. Ayyo!!!!!')
+...
+        </pre>
+      </li>
+      <li>
+        <pre class="prettyprint" data-lang="shell">$ cat hello_world.py
+Why ? I am Gajini. Oye Gajini, Your camera is stolen. Ayyo!!!!!
+        </pre>
+      </li>
+    </ul>
+    </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Few important Modules</h2>
+      <h3>time, os, datetime</h3>
+    </hgroup>
+    <article>
+    <ul class="build">
+      <li><code>time</code> module
+        <ul>
+          <li><pre class="prettyprint" data-lang="python">&gt;&gt;&gt; import time
+&gt;&gt;&gt; time.time()  # An easy way to profile code blocks
+1376666540.631406</pre>
+
+          </li>
+        </ul>
+      </li>
+      <li><code>os</code> module
+        <ul>
+          <li><pre class="prettyprint" data-lang="python">&gt;&gt;&gt; import os
+&gt;&gt;&gt; os.environ</pre>
+
+          </li>
+        </ul>
+      </li>
+      <li><code>datetime</code> module
+        <ul>
+          <li><pre class="prettyprint" data-lang="python">&gt;&gt;&gt; import datetime
+&gt;&gt;&gt; datetime.date.today()
+datetime.date(2013, 8, 17)</pre>
+
+          </li>
+        </ul>
+      </li>
+    </ul>
+    </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Many more important Modules</h2>
+    </hgroup>
+    <article>
+    <ul>
+      <li>sys</li>
+      <li>urllib, urllib2</li>
+      <li>csv</li>
+      <li>re</li>
+      <li>math</li>
+      <li>itertools</li>
+      <li>xml</li>
+      <li>pdb</li>
+      <li>hashlib</li>
+      <li>argparse</li>
+      <li>logging</li>
+      <li>unittest</li>
+      <li>json</li>
+    </ul>
+    </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2>dictionaries</h2>
+      <h3>Most powerful data-structure on the planet!</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Similar to associative arrays in other languages</li>
+        <li>Nothing but an <code>unordered</code> set of <code>key</code>:<code>value</code> pairs
+          <ul class="build">
+            <li><pre class="prettyprint" data-lang="python">&gt;&gt;&gt; student = {'name': 'Nanda', 'roll': 522, 'edu': 'Engineering'}
+&gt;&gt;&gt; type(student)
+&lt;type 'dict'&gt;</type></pre>
+            </li>
+            <li><pre class="prettyprint" data-lang="python">&gt;&gt;&gt; student.keys()
+['edu', 'name', 'roll']
+&gt;&gt;&gt; student.values()
+['Engineering', 'Nanda', 522]
+&gt;&gt;&gt; student.items()
+[('edu', 'Engineering'), ('name', 'Nanda'), ('roll', 522)]
+</pre></li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+    </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Dict</h2>
+      <h3>Can Behave like a List too!</h3>
+    </hgroup>
+    <article>
+    <ul class="build">
+      <li>Like in a <code>List</code>, we can <code>index</code> elements by their <code>keys</code>
+          <ul>
+            <li><pre class="prettyprint" data-lang="python">&gt;&gt;&gt; student['name']
+'Nanda'
+&gt;&gt;&gt; student['edu']
+'Engineering'</pre>
+            </li>
+          </ul>
+      </li>
+      <li>Using Keys to loop through the data
+          <ul>
+            <li>
+              <pre class="prettyprint" data-lang="python">&gt;&gt;&gt; 'name' in student
+True
+&gt;&gt;&gt; for field in student:
+...     print field, student[field]
+...
+edu Engineering
+name Nanda
+roll 522</pre>
+            </li>
+          </ul>
+
+        </li>
+          </ul>
+
+    </article>
+    </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Resources for further reading</h2>
+    </hgroup>
+    <article>
+    <ul>
+      <li><a href="http://python.org/doc/">Docs from Python.org</a></li>
+      <li><a href="https://github.com/gregmalcolm/python_koans">Python Koans</a></li>
+      <li><a href="http://learnpythonthehardway.org/book/">Learn Python The Hard Way</a></li>
+      <li><a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/presentation.html">Code like a Pythonista</a></li>
+      <li><a href="http://www.pythonchallenge.com/">Python Challenge</a></li>
+      <li>Many more! Just <a href="https://www.google.com/search?q=learn+python&oq=learn+python&aqs=chrome.0.69i57j69i59j5j69i60j0j69i60.3719j0&sourceid=chrome&ie=UTF-8">Google</a> I say!</li>
+    </ul>
+    </article>
+    </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/python-icon.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&gt;&gt;&gt;&nbsp;Thank You!</h2>
+      <p></p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
 </html>
